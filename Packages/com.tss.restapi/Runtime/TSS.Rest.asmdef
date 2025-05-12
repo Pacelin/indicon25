@@ -1,0 +1,32 @@
+{
+    "name": "TSS.Rest",
+    "rootNamespace": "TSS.Rest",
+    "references": [
+        "TSS.Core",
+        "UniTask",
+        "TSS.Utils",
+        "UniTask.Addressables",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "R3.Unity"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Supabase.dll",
+        "Supabase.Gotrue.dll",
+        "Newtonsoft.Json.dll",
+        "Supabase.Realtime.dll",
+        "Supabase.Storage.dll",
+        "R3.dll",
+        "Supabase.Core.dll",
+        "Supabase.Postgrest.dll",
+        "Supabase.Functions.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

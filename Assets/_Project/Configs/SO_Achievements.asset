@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042f5aae6ef3c5e4cae1cd991c611c76, type: 3}
+  m_Name: SO_Achievements
+  m_EditorClassIdentifier: TSS.Achievements.AchievementsConfig, TSS.Achievements
+  _viewPrefab: {fileID: 760862266283794182, guid: 05af27ffb65839e4c91d16d92f928776, type: 3}
+  _panelPrefab: {fileID: 7834350470061144188, guid: 75dc8b80a7865e94cb961866e3933919, type: 3}
+  _collection:
+  - {fileID: 11400000, guid: 2292b4c5c43aa234fb2b1770a5700d8d, type: 2}
+  - {fileID: 11400000, guid: 03bf1e92f546ca64390cdeec0de8e191, type: 2}
+  - {fileID: 11400000, guid: 8e0e56d3f2b3ebd41a81c1788c02059b, type: 2}
+  - {fileID: 11400000, guid: 515696af80d0d7048a01c44c6225c1af, type: 2}
+  - {fileID: 11400000, guid: 279a6abb7e8264344ad0db23b5290851, type: 2}
+  - {fileID: 11400000, guid: 14127ae3cd1795048a3a269c7c4e51b6, type: 2}
+  - {fileID: 11400000, guid: e4c4fc0a3ed6e464bbc28a4a44819568, type: 2}
+  _grantApi: grant-achievement
+  _listApi: user-achievements
+  _ratioApi: achievements-ratio
+  _clearApi: clear-achievements

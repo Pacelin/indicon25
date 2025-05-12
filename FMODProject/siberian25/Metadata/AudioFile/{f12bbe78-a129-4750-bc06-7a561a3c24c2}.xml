@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f12bbe78-a129-4750-bc06-7a561a3c24c2}">
+		<property name="assetPath">
+			<value>A_boss_attack3.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.1652187500000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{94120efc-b8b7-49f8-abe2-2978c864d41d}</destination>
+		</relationship>
+	</object>
+</objects>

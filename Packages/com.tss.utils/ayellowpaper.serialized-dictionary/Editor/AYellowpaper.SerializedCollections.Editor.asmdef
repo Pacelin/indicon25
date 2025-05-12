@@ -1,0 +1,19 @@
+{
+    "name": "AYellowpaper.SerializedCollections.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2a7627cd852ff4747a4f83e452c5502f",
+        "GUID:a4f62e9742572a54180113e2672c17dc"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

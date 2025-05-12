@@ -1,0 +1,106 @@
+﻿// Auto-generated code. Reference: "Packages/com.tss.cms/Editor/CMSGenerator.cs"
+
+// ReSharper disable RedundantUsingDirective
+#pragma warning disable CS1998
+
+{{~ if namespaces.size > 0 ~}}
+{{~ for namespace in namespaces | array.uniq ~}}
+using {{ namespace }};
+{{~ end ~}}
+{{~ end ~}}
+{{~ if print_loader 
+"using TSS.Core;\n"
+end ~}}
+{{- func initialize_folders(folders, indent)
+if folders.size > 0
+for folder in folders
+indent + "await " + folder.name + ".Initialize(cancellationToken);\n"
+end 
+end
+end -}}
+{{- func make_folders(folders, indent)
+if folders.size > 0
+"\n"
+for folder in folders
+make_folder folder indent
+end
+end
+end -}}
+{{- func make_folder(folder, indent)
+indent + "[PublicAPI]\n"
+indent + "public static class " + folder.name + "\n"
+indent + "{\n"
+folder_consts folder.items indent+"\t"
+folder_fields folder.items indent+"\t"
+"\n"
+indent + "\tpublic static async UniTask Initialize(CancellationToken cancellationToken)\n"
+indent + "\t{\n"
+initialize_folders folder.subfolders indent+"\t\t"
+folder_init_fields folder.items indent+"\t\t"
+indent + "\t}\n"
+make_folders folder.subfolders indent+"\t"
+indent + "}\n"
+end -}}
+{{- func folder_consts(items, indent)
+for item in items
+if item.is_address
+indent + "public const string " + item.name + " = \"" + item.address + "\";\n"
+end
+end
+end -}}
+{{- func folder_fields(items, indent)
+for item in items
+if !item.is_address
+indent + "public static " + item.type + " " + item.name + " { get; private set; }\n" 
+end
+end
+end -}}
+{{- func folder_init_fields(items, indent)
+for item in items
+if !item.is_address
+if item.get_component
+indent + item.name + " = (await Addressables.LoadAssetAsync<GameObject>(\"" + item.address + "\")\n"
+indent + "\t.ToUniTask(cancellationToken: cancellationToken)).GetComponent<" + item.type + ">();\n"
+else
+indent + item.name + " = await Addressables.LoadAssetAsync<" + item.type + ">(\"" + item.address + "\")\n"
+indent + "\t.ToUniTask(cancellationToken: cancellationToken);\n"
+end
+end
+end
+end -}}
+{{- "\n" -}}
+namespace TSS.ContentManagement
+{
+    {{~ if print_loader ~}}
+    [PublicAPI]
+    [UsedImplicitly]
+    [RuntimeOrder(ERuntimeOrder.SystemRegistration)]
+    public class CMS : IRuntimeLoader
+    {
+        {{~ folder_consts items "\t"*2 ~}}
+        {{~ folder_fields items "\t"*2 }} 
+
+        public async UniTask Initialize(CancellationToken cancellationToken)
+        {
+            {{~ initialize_folders folders "\t"*3 ~}}
+            {{~ folder_init_fields items "\t"*3 ~}}
+        }
+
+        public void Dispose() { }
+        {{~ make_folders folders "\t"*2 ~}}
+    }
+    {{~ else ~}}
+    [PublicAPI]
+    public static class CMS
+    {
+        {{~ folder_consts items "\t"*2 ~}}
+        {{~ folder_fields items "\t"*2 ~}} 
+    
+        public static async UniTask Initialize(CancellationToken cancellationToken)
+        {
+            {{~ initialize_folders folders "\t"*3 ~}}
+        }
+        {{~ make_folders folders "\t"*2 ~}}
+    }
+    {{~ end ~}}
+}

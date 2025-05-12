@@ -1,0 +1,26 @@
+{
+  "name": "com.tss.jams",
+  "version": "1.0.0",
+  "displayName": "TSS - Jams",
+  "description": "This package contains CD for TSS team jam projects",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.tss.utils": "1.0.0"
+  },
+  "keywords": [
+    "tss",
+    "tsscore",
+    "tssutils",
+    "tssjams",
+    "jam",
+    "gamejam",
+    "tssgamejam",
+    "tsspackage"
+  ],
+  "author": {
+    "name": "TSS",
+    "email": "Warfacer2020@gmail.com"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@MyOrg" },
+  "repository": { "type": "git", "url": "ssh://git@github.com:MyOrg/MyRepository.git", "directory": "com.myorg.<packagename>" }
+}

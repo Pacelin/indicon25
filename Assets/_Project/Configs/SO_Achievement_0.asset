@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6299c4a559d382e46b9abfd4bab5cb46, type: 3}
+  m_Name: SO_Achievement_0
+  m_EditorClassIdentifier: TSS.Achievements.AchievementConfig, TSS.Achievements
+  _id: Ach1
+  _icon: {fileID: 21300000, guid: 1b0070bfe2d708d44a44eaeebddf89b2, type: 3}
+  _iconColor: {r: 1, g: 1, b: 1, a: 1}
+  _caption: "\u041A\u043E\u043C\u0431\u043E?"
+  _description: "\u041A\u043E\u043C\u0431\u043E?"
+  _reportsCount: 1
+  _isSecret: 0
+  _lockedIcon: {fileID: 21300000, guid: 1b0070bfe2d708d44a44eaeebddf89b2, type: 3}
+  _lockedIconColor: {r: 0.6901961, g: 0.6901961, b: 0.6901961, a: 1}
+  _lockedCaption: "\u041A\u043E\u043C\u0431\u043E?"
+  _lockedDescription: "\u041A\u043E\u043C\u0431\u043E?"
+  _claimSound:
+    _eventRef:
+      Guid:
+        Data1: -1117165947
+        Data2: 1076614636
+        Data3: -967558497
+        Data4: 1705713923
+      Path: event:/UI/AchievementAppear
+  _notificationContainer: Default

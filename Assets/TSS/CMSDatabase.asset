@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739b1727448846c3932ee719b1f8fcd9, type: 3}
+  m_Name: CMSDatabase
+  m_EditorClassIdentifier: TSS.ContentManagement.Editor.CMSAssetDatabase, TSS.ContentManagement.Editor
+  _entries:
+  - GUID: 82bdb546796e2da4eb218e0597a05672
+    CMSName: Scenes/MainMenu
+    ComponentName: GameObject
+    Namespace: 
+  - GUID: 78641ba9cfcb7c740af3afacdcc3358a
+    CMSName: Scenes/Game
+    ComponentName: GameObject
+    Namespace: 

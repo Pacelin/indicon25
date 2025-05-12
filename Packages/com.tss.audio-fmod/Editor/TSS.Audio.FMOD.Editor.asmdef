@@ -1,0 +1,28 @@
+{
+    "name": "TSS.Audio.FMOD.Editor",
+    "rootNamespace": "TSS.Audio.Editor",
+    "references": [
+        "GUID:9841aa18ec092324d9bc44e7c012f2a3",
+        "GUID:c81d0ee8d6efa394bb6dc05915596a13",
+        "GUID:b1d2e48546b45594ea9f55aff520bbcf",
+        "GUID:0c752da273b17c547ae705acf0f2adf2",
+        "GUID:aab3caaf43456d6449a3e035348ff798"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.tss.core",
+            "expression": "",
+            "define": "TSS_CORE"
+        }
+    ],
+    "noEngineReferences": false
+}

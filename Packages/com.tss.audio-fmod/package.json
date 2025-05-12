@@ -1,0 +1,27 @@
+{
+  "name": "com.tss.audio-fmod",
+  "version": "1.0.0",
+  "displayName": "TSS - Audio FMOD",
+  "description": "This package contains all dependencies and audio functionality with FMOD for TSS team projects",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.addressables": "2.2.2",
+    "jp.hadashikick.vcontainer": "1.16.8",
+    "com.cysharp.unitask.compatible": "2.3.1",
+    "org.nuget.scriban": "5.11.0",
+    "com.tss.utils": "1.0.0"
+  },
+  "keywords": [
+    "tss",
+    "tsscore",
+    "tsspackage",
+    "tssaudio",
+    "tssfmod"
+  ],
+  "author": {
+    "name": "TSS",
+    "email": "Warfacer2020@gmail.com"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@MyOrg" },
+  "repository": { "type": "git", "url": "ssh://git@github.com:MyOrg/MyRepository.git", "directory": "com.myorg.<packagename>" }
+}

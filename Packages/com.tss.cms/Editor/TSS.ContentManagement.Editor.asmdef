@@ -1,0 +1,27 @@
+{
+    "name": "TSS.ContentManagement.Editor",
+    "rootNamespace": "TSS.ContentManagement.Editor",
+    "references": [
+        "GUID:7bd9dd89b9889a24fb9e60cabea38b6f",
+        "GUID:69448af7b92c7f342b298e06a37122aa",
+        "GUID:b1d2e48546b45594ea9f55aff520bbcf",
+        "GUID:c81d0ee8d6efa394bb6dc05915596a13"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.tss.core",
+            "expression": "",
+            "define": "TSS_CORE"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,24 @@
+{
+    "name": "TSS.Tweening.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:85bb74391becbf14685615ce59c9a6f2",
+        "GUID:c81d0ee8d6efa394bb6dc05915596a13",
+        "GUID:b1d2e48546b45594ea9f55aff520bbcf",
+        "GUID:6d87492a0adca3b4881c412d6097ea36"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "DOTweenEditor.dll",
+        "DOTween.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{560fc5c2-ca59-4119-bf82-7c89f2605b20}">
+		<property name="name">
+			<value>Beam</value>
+		</property>
+		<relationship name="folder">
+			<destination>{41175c68-6391-4bbb-8136-b522b995ccb0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b8329f19-153d-42b7-97a0-cb5195c0fd2a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b8329f19-153d-42b7-97a0-cb5195c0fd2a}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: 74d1f905e2729fb4cabb3f98768f8d67
+  m_SerializeEntries:
+  - m_GUID: 62af7fca09f34c74481788e651479d18
+    m_Address: Runtime Settings
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78641ba9cfcb7c740af3afacdcc3358a
+    m_Address: Assets/Scenes/2_Game.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82bdb546796e2da4eb218e0597a05672
+    m_Address: Assets/Scenes/1_Menu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e04e0c45b8d7cc4a98ed3247bda1d69
+    m_Address: Rest Config
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93b2e0b7538d4f944a3ffa3f94be4813
+    m_Address: Achievements Config
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5f45ce303cab2046acd57fff6441457
+    m_Address: Audio Volumes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 3df31db82dee45c4ca1035a0e1c9b599, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c7ab5b8860cf9e448b6c536920b432d5, type: 2}
+    - {fileID: 11400000, guid: e08adc78f89914b44a65a2be474569b4, type: 2}

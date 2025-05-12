@@ -1,0 +1,34 @@
+{
+  "name": "com.tss.scene-management",
+  "version": "1.0.0",
+  "displayName": "TSS - Scene Management",
+  "description": "This package contains scene management framework for TSS team projects",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.addressables": "2.2.2",
+    "jp.hadashikick.vcontainer": "1.16.8",
+    "com.cysharp.messagepipe": "1.8.1",
+    "com.cysharp.messagepipe.vcontainer": "1.8.1",
+    "com.cysharp.unitask.compatible": "2.3.1",
+    "com.cysharp.r3": "1.2.9",
+    "org.nuget.r3": "1.2.9",
+    "org.nuget.observablecollections.r3": "3.3.3",
+    "com.tss.utils": "1.0.0"
+  },
+  "keywords": [
+    "tss",
+    "tsscore",
+    "tsspackage",
+    "tssscene",
+    "tssscenemanagement",
+    "scenemanagement",
+    "unityscenes",
+    "unityscenemanagement"
+  ],
+  "author": {
+    "name": "TSS",
+    "email": "Warfacer2020@gmail.com"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@MyOrg" },
+  "repository": { "type": "git", "url": "ssh://git@github.com:MyOrg/MyRepository.git", "directory": "com.myorg.<packagename>" }
+}

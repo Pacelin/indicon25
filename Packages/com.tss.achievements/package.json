@@ -1,0 +1,24 @@
+{
+  "name": "com.tss.achievements",
+  "version": "1.0.0",
+  "displayName": "TSS - Achievements",
+  "description": "This package contains all achievements API for TSS team projects",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.tss.core": "1.0.0",
+    "com.tss.utils": "1.0.0",
+    "com.tss.restapi": "1.0.0"
+  },
+  "keywords": [
+    "tss",
+    "tsscore",
+    "tssutils",
+    "tsspackage"
+  ],
+  "author": {
+    "name": "TSS",
+    "email": "Warfacer2020@gmail.com"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@MyOrg" },
+  "repository": { "type": "git", "url": "ssh://git@github.com:MyOrg/MyRepository.git", "directory": "com.myorg.<packagename>" }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "TSS.Achievements.Editor",
+    "rootNamespace": "TSS.Achievements.Editor",
+    "references": [
+        "TSS.Achievements"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "Supabase.dll",
+        "Supabase.Gotrue.dll",
+        "Newtonsoft.Json.dll",
+        "Supabase.Realtime.dll",
+        "Supabase.Storage.dll",
+        "R3.dll",
+        "Supabase.Core.dll",
+        "Supabase.Postgrest.dll",
+        "Supabase.Functions.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
