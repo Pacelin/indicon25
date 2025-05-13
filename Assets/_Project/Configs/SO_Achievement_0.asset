@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6299c4a559d382e46b9abfd4bab5cb46, type: 3}
   m_Name: SO_Achievement_0
   m_EditorClassIdentifier: TSS.Achievements.AchievementConfig, TSS.Achievements
-  _id: Ach1
+  _id: ID
   _icon: {fileID: 21300000, guid: 1b0070bfe2d708d44a44eaeebddf89b2, type: 3}
   _iconColor: {r: 1, g: 1, b: 1, a: 1}
-  _caption: "\u041A\u043E\u043C\u0431\u043E?"
-  _description: "\u041A\u043E\u043C\u0431\u043E?"
+  _caption: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435"
+  _description: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
   _reportsCount: 1
   _isSecret: 0
   _lockedIcon: {fileID: 21300000, guid: 1b0070bfe2d708d44a44eaeebddf89b2, type: 3}

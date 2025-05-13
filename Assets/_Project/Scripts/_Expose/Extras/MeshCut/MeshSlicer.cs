@@ -3,6 +3,9 @@ using System.Linq;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
+// ReSharper disable ArrangeObjectCreationWhenTypeEvident
+// ReSharper disable RedundantExplicitArrayCreation
+// ReSharper disable RedundantArrayCreationExpression
 
 namespace TSS.MeshCut
 {
@@ -34,17 +37,17 @@ namespace TSS.MeshCut
             // iterate triangles
             Mesh mesh = mf.mesh;
             int oldVerticesSize = mesh.vertices.Length;
-            List<MeshVertex> newMeshVertices = MeshVertex.ReadFromMesh(mesh);
-            List<List<int>> newTrianglesList = new List<List<int>>(); //for two submesh
+            var newMeshVertices = MeshVertex.ReadFromMesh(mesh);
+            var newTrianglesList = new List<List<int>>(); //for two submesh
             
             //split into part1 and part2
             var ve1 = new List<MeshVertex>();
             var oldNewIdxDict1 = new Dictionary<int, int>();
-            List<int>[] tri1 = new List<int>[]{new List<int>(), new List<int>()}; //for two submesh
+            var tri1 = new List<int>[]{new List<int>(), new List<int>()}; //for two submesh
             
             var ve2 = new List<MeshVertex>();
             var oldNewIdxDict2 = new Dictionary<int, int>();
-            List<int>[] tri2 = new List<int>[]{new List<int>(), new List<int>()}; //for two submesh
+            var tri2 = new List<int>[]{new List<int>(), new List<int>()}; //for two submesh
             
             HashSet<int> crossSurfaceVerIdx = new HashSet<int>();
             
@@ -202,7 +205,6 @@ namespace TSS.MeshCut
                 Vector3 b = mesh.vertices[bi];
                 Vector3 c = mesh.vertices[ci];
                 
-                float kab, kac, kbc;
                 var rab = plane.Intersection(a, b);
                 var rac = plane.Intersection(a, c);
                 var rbc = plane.Intersection(b, c);
@@ -219,23 +221,19 @@ namespace TSS.MeshCut
 
                 if (result == TriXPlaneType.Cross)
                 {
-                    SliceTriTo3(mesh, new []{a,b,c}, new []{ai,bi,ci}, new []{rab,rac,rbc}, newMeshVertices, newTriangles);
+                    SliceTriTo3(mesh, new []{ai,bi,ci}, new []{rab,rac,rbc}, newMeshVertices, newTriangles);
                 }
                 else if (result == TriXPlaneType.OneAndCross)
                 {
-                    SliceTriTo2(mesh, new []{a,b,c}, new []{ai,bi,ci}, new []{rab,rac,rbc}, newMeshVertices, newTriangles);
+                    SliceTriTo2(mesh,  new []{ai,bi,ci}, new []{rab,rac,rbc}, newMeshVertices, newTriangles);
                 }
                 intersect = true;
             }
             return intersect;
         }
         
-        private void SliceTriTo3(Mesh mesh, Vector3[] abc, int[] abci, LineXPlaneResult[] rabc, List<MeshVertex> newMeshVertices, List<int> newTriangles)
+        private void SliceTriTo3(Mesh mesh, int[] abci, LineXPlaneResult[] rabc, List<MeshVertex> newMeshVertices, List<int> newTriangles)
         {
-            Vector3 a = abc[0];
-            Vector3 b = abc[1]; 
-            Vector3 c = abc[2];
-            
             int ai = abci[0];
             int bi = abci[1]; 
             int ci = abci[2]; 
@@ -312,12 +310,8 @@ namespace TSS.MeshCut
             newTriangles.Add(i1i);
         }
         
-        private void SliceTriTo2(Mesh mesh, Vector3[] abc, int[] abci, LineXPlaneResult[] rabc, List<MeshVertex> newMeshVertices, List<int> newTriangles)
+        private void SliceTriTo2(Mesh mesh, int[] abci, LineXPlaneResult[] rabc, List<MeshVertex> newMeshVertices, List<int> newTriangles)
         {
-            Vector3 a = abc[0];
-            Vector3 b = abc[1]; 
-            Vector3 c = abc[2];
-            
             int ai = abci[0];
             int bi = abci[1]; 
             int ci = abci[2]; 
@@ -388,7 +382,7 @@ namespace TSS.MeshCut
         
         public GameObject CreateMeshFromOrigin(List<MeshVertex> vertices, int[] triangles, GameObject origin)
         {
-            GameObject obj = GameObject.Instantiate(origin);
+            GameObject obj = Object.Instantiate(origin);
 
             MeshFilter mf = obj.GetComponent<MeshFilter>();
             Mesh mesh = new Mesh();
@@ -417,7 +411,7 @@ namespace TSS.MeshCut
             return obj;
         }
         
-        public GameObject CreateMesh(List<MeshVertex> vertices, int[] triangles, int[] crossTriangles, GameObject origin)
+        private GameObject CreateMesh(List<MeshVertex> vertices, int[] triangles, int[] crossTriangles, GameObject origin)
         {
             GameObject obj = new GameObject();
             var transform = origin.transform;
@@ -428,7 +422,7 @@ namespace TSS.MeshCut
             }
             
             MeshFilter mf = obj.AddComponent<MeshFilter>();
-            MeshRenderer mr = obj.AddComponent<MeshRenderer>();
+            obj.AddComponent<MeshRenderer>();
 
             Mesh mesh = new Mesh();
             
@@ -451,7 +445,7 @@ namespace TSS.MeshCut
                 rb2.mass = rb1.mass;
             }
             
-            if (obj.TryGetComponent(out Collider collider))
+            if (obj.TryGetComponent(out Collider _))
             {
                 var col1 = part1.AddComponent<MeshCollider>();
                 col1.convex = true;
@@ -460,11 +454,10 @@ namespace TSS.MeshCut
             }
         }
         
-        public static void CopyMeshMaterial(GameObject from, GameObject to, Material sliceInsideMaterial)
+        private static void CopyMeshMaterial(GameObject from, GameObject to, Material sliceInsideMaterial)
         {
             MeshRenderer oldMeshRenderer = from.GetComponent<MeshRenderer>();
-            MeshRenderer newMeshRenderer;
-            if(! to.TryGetComponent<MeshRenderer>(out newMeshRenderer))
+            if(! to.TryGetComponent<MeshRenderer>(out var newMeshRenderer))
             {
                 newMeshRenderer = to.AddComponent<MeshRenderer>();
             }
@@ -483,6 +476,7 @@ namespace TSS.MeshCut
                     //set material
                     newMeshRenderer.materials[j].CopyPropertiesFromMaterial(materialList[j]);
                     //set shader
+                    // ReSharper disable once Unity.InefficientPropertyAccess
                     newMeshRenderer.materials[j].shader = materialList[j].shader;
                 }
             }
@@ -490,6 +484,7 @@ namespace TSS.MeshCut
             if (needNewMat)
             {
                 newMeshRenderer.materials[1].CopyPropertiesFromMaterial(sliceInsideMaterial);
+                // ReSharper disable once Unity.InefficientPropertyAccess
                 newMeshRenderer.materials[1].shader = sliceInsideMaterial.shader;
             }
         }

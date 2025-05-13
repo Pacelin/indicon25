@@ -306,6 +306,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1120692169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120692171}
+  - component: {fileID: 1120692170}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1120692170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120692169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1a7f32fc674f5d8b87ba08d0434393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: TSS.Extras.PlayerControl.Third3D.Third3DDashComponent,
+    Assembly-CSharp
+  _dashInput:
+    m_Name: Dash Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a6a4fa1a-5bc1-4ba4-b0c9-413db79d14ed
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: fc1da8b7-4fc9-426e-a203-61ef25499638
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash Input
+      m_Flags: 4
+    - m_Name: up
+      m_Id: a151f1a9-74b1-439a-8e96-16be29fb37f6
+      m_Path: <Mouse>/position/y
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash Input
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 7549d46a-9841-4b3f-aded-7eff468e1b39
+      m_Path: <Mouse>/radius/x
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash Input
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 8634b768-f4ec-4775-a0f9-a5427db37684
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash Input
+      m_Flags: 8
+    - m_Name: right
+      m_Id: e9cc090e-6aec-457f-b74d-1cc740acff0c
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash Input
+      m_Flags: 8
+    m_Flags: 0
+  _ignoreTimeScale: 1
+  _baseValue:
+    _representation: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e703000000000000
+  _adding: 0.01
+  _level: 19342
+  _mySuper:
+    _representation: e6030000590200000c00000043030000de0300009a030000d00100006500000099010000e10200003f020000a1030000ce000000c30100003000000018000000840300008500000024000000bd010000150200004d0100005d0200009c000000b1000000b9020000bd020000f4020000e800000059030000
+  _dashInputBuffer: 0.1
+  _dashDistance: 0
+  _dashSpeed: 0
+  _dashCooldown: 0
+--- !u!4 &1120692171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120692169}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 127.6785, y: 145.349, z: 18.628548}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143702274
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,3 +697,4 @@ SceneRoots:
   - {fileID: 1143702275}
   - {fileID: 2091672384}
   - {fileID: 633440983}
+  - {fileID: 1120692171}

@@ -1,6 +1,4 @@
 ﻿using System.Text.RegularExpressions;
-using JetBrains.Annotations;
-using UnityEngine;
 
 namespace TSS.Utils.Editor
 {
